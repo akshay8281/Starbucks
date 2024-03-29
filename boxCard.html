@@ -1,244 +1,329 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Starbucks</title>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
-      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-  </head>
 
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: sans-serif;
-    }
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Starbucks</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
 
-    ul {
-      list-style: none;
-    }
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+  }
 
-    a {
-      text-decoration: none;
-      color: black;
-    }
+  ul {
+    list-style: none;
+  }
 
-    :root {
-      --padding-inline-section: 20px;
-    }
+  a {
+    text-decoration: none;
+    color: black;
+  }
 
-    .flex {
-      display: flex;
-      align-items: center;
-    }
+  :root {
+    --padding-inline-section: 20px;
+  }
 
-    .container {
-      max-width: 1265px;
-      margin-inline: auto;
-    }
+  .flex {
+    display: flex;
+    align-items: center;
+  }
 
-    /* Box-Cards */
+  .container {
+    max-width: 1265px;
+    margin-inline: auto;
+  }
 
-    .boxcards-section {
-      margin-top: 50px;
-    }
+  /* Box-Cards */
 
-    .boxcards-slabs {
-      justify-content: space-between;
-      flex-wrap: wrap;
-    }
+  .boxcards-section {
+    margin-top: 50px;
+  }
 
-    .boxcards-slabs h3 {
-      color: black;
-    }
+  .boxcards-slabs {
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
 
-    .boxcards-slabs p {
-      color: grey;
-    }
+  .boxcards-slabs h3 {
+    color: black;
+  }
 
-    .card-container-img {
-      height: 150px;
-      width: 100%;
-      /* border-radius: 20px; */
-    }
+  .boxcards-slabs p {
+    color: grey;
+  }
 
-    .card-text {
-      justify-content: space-between;
-    }
+  .card-container-img {
+    height: 150px;
+    width: 100%;
+    /* border-radius: 20px; */
+  }
 
-    .card-container-box {
-      flex-direction: column;
-      max-width: 32%;
-      flex-wrap: wrap;
-      margin-top: 40px;
-      align-items: flex-start;
-      height: 350px;
-      box-sizing: border-box;
-      box-shadow: 0px 0px 5px 0.8px rgb(191, 190, 190);
-    }
+  .card-text {
+    justify-content: space-between;
+  }
 
-    .card-body-container {
-      padding: 5px 20px 20px 20px;
-    }
+  .card-container-box {
+    flex-direction: column;
+    max-width: 32%;
+    flex-wrap: wrap;
+    margin-top: 40px;
+    align-items: flex-start;
+    height: 350px;
+    box-sizing: border-box;
+    box-shadow: 0px 0px 5px 0.8px rgb(191, 190, 190);
+  }
 
-    .new-launch {
-      justify-content: flex-start;
-    }
+  .card-body-container {
+    padding: 5px 20px 20px 20px;
+  }
 
-    .card-left-text {
-      align-items: flex-start;
-      flex-direction: column;
-      gap: 7px;
-    }
+  .new-launch {
+    justify-content: flex-start;
+  }
 
-    .launch-text {
-      font-size: 10px;
-      background-color: rgb(228, 253, 228);
-      border-radius: 15px;
-      padding: 5px 8px;
-      color: green;
-      font-weight: 400;
-    }
+  .card-left-text {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 7px;
+  }
 
-    .purchase {
-      margin-top: 12px;
-      justify-content: space-between;
-    }
+  .launch-text {
+    font-size: 10px;
+    background-color: rgb(228, 253, 228);
+    border-radius: 15px;
+    padding: 5px 8px;
+    color: green;
+    font-weight: 400;
+  }
 
-    .Add-item {
-      border-radius: 50px;
-      border: none;
-      background-color: darkgreen;
-      color: white;
-      padding: 8px 20px;
-    }
+  .purchase {
+    margin-top: 12px;
+    justify-content: space-between;
+  }
 
-    .card-text-p {
-      font-size: 10px;
-    }
-  </style>
+  .Add-item {
+    border-radius: 50px;
+    border: none;
+    background-color: darkgreen;
+    color: white;
+    padding: 8px 20px;
+  }
 
-  <body>
-    <!-- NavBar -->
+  .card-text-p {
+    font-size: 10px;
+  }
+</style>
 
-    <!-- Box- cards -->
+<body>
+  <!-- NavBar -->
 
-    <section class="boxcards-section">
-      <div class="container">
-        <h2>Latest Offerings</h2>
+  <!-- Box- cards -->
 
-        <div class="boxcards-slabs flex">
-          <div class="card-container-box flex">
-            <a href="#" class="card-container-a">
-              <img
-                class="card-container-img"
-                src="https://starbucks-cdn-01.s3.ap-south-1.amazonaws.com/Items/Large/webP/104014.webp"
-                alt=""
-              />
-              <div class="card-body-container">
-                <div class="new-launch flex">
-                  <img src="./asset 7.svg" alt="" />
-                  <h5 class="launch-text">New Launch</h5>
-                </div>
-                <div class="card-text flex">
-                  <div class="card-left-text flex">
-                    <h3>Mocha Cookie Crumble Latte</h3>
-                    <p class="card-text-p">
-                      SHORT(Short Mocha Cookie Crumble).
-                    </p>
-                    <h4>
-                      Our Mocha Cookie crumble Latte is a deliciously flavoured
-                      mocha indulgence - Hot coffee meets chocolate and co ...
-                    </h4>
-                  </div>
-                </div>
-                <div class="purchase flex">
-                  <h3>Rs. 450.00</h3>
-                  <button class="Add-item">Add Item</button>
+  <section class="boxcards-section">
+    <div class="container">
+      <h2>Latest Offerings</h2>
+
+      <div class="boxcards-slabs flex">
+        <div class="card-container-box flex">
+          <a href="#" class="card-container-a">
+            <img class="card-container-img"
+              src="https://starbucks-cdn-01.s3.ap-south-1.amazonaws.com/Items/Large/webP/104014.webp" alt="" />
+            <div class="card-body-container">
+              <div class="new-launch flex">
+                <img src="./asset 7.svg" alt="" />
+                <h5 class="launch-text">New Launch</h5>
+              </div>
+              <div class="card-text flex">
+                <div class="card-left-text flex">
+                  <h3>Mocha Cookie Crumble Latte</h3>
+                  <p class="card-text-p">
+                    SHORT(Short Mocha Cookie Crumble).
+                  </p>
+                  <h4>
+                    Our Mocha Cookie crumble Latte is a deliciously flavoured
+                    mocha indulgence - Hot coffee meets chocolate and co ...
+                  </h4>
                 </div>
               </div>
-            </a>
-          </div>
+              <div class="purchase flex">
+                <h3>Rs. 450.00</h3>
+                <button class="Add-item">Add Item</button>
+              </div>
+            </div>
+          </a>
+        </div>
 
-          <!-- Box 2 -->
+        <!-- Box 2 -->
 
-          <div class="card-container-box flex">
-            <a href="#" class="card-container-a">
-              <img
-                class="card-container-img"
-                src="https://starbucks-cdn-01.s3.ap-south-1.amazonaws.com/Items/Large/webP/104014.webp"
-                alt=""
-              />
+        <div class="card-container-box flex">
+          <a href="#" class="card-container-a">
+            <img class="card-container-img"
+              src="https://starbucks-cdn-01.s3.ap-south-1.amazonaws.com/Items/Large/webP/104014.webp" alt="" />
 
-              <div class="card-body-container">
-                <div class="new-launch flex">
-                  <img src="./asset 7.svg" alt="" />
-                  <h5 class="launch-text">New Launch</h5>
-                </div>
-                <div class="card-text flex">
-                  <div class="card-left-text flex">
-                    <h3>Mocha Cookie Crumble Frappuccino</h3>
-                    <p class="card-text-p">
-                      TALL(Tall Mocha Cookie Crumble Frappuccino).
-                    </p>
-                    <h4>
-                      A perfect blend of coffee ,vanilla flavour, milk and cocoa
-                      powder. Finished with delicious chocolate whipped.....
-                    </h4>
-                  </div>
-                </div>
-
-                <div class="purchase flex">
-                  <h3>Rs. 480.00</h3>
-                  <button class="Add-item">Add Item</button>
+            <div class="card-body-container">
+              <div class="new-launch flex">
+                <img src="./asset 7.svg" alt="" />
+                <h5 class="launch-text">New Launch</h5>
+              </div>
+              <div class="card-text flex">
+                <div class="card-left-text flex">
+                  <h3>Mocha Cookie Crumble Frappuccino</h3>
+                  <p class="card-text-p">
+                    TALL(Tall Mocha Cookie Crumble Frappuccino).
+                  </p>
+                  <h4>
+                    A perfect blend of coffee ,vanilla flavour, milk and cocoa
+                    powder. Finished with delicious chocolate whipped.....
+                  </h4>
                 </div>
               </div>
-            </a>
-          </div>
 
-          <!-- box3 -->
+              <div class="purchase flex">
+                <h3>Rs. 480.00</h3>
+                <button class="Add-item">Add Item</button>
+              </div>
+            </div>
+          </a>
+        </div>
+        <!-- Box 2 -->
 
-          <div class="card-container-box flex">
-            <a href="#" class="card-container-a">
-              <img
-                class="card-container-img"
-                src="https://starbucks-cdn-01.s3.ap-south-1.amazonaws.com/Items/Large/webP/104014.webp"
-                alt=""
-              />
+        <div class="card-container-box flex">
+          <a href="#" class="card-container-a">
+            <img class="card-container-img"
+              src="https://starbucks-cdn-01.s3.ap-south-1.amazonaws.com/Items/Large/webP/104014.webp" alt="" />
 
-              <div class="card-body-container">
-                <div class="new-launch flex">
-                  <img src="./asset 7.svg" alt="" />
-                  <h5 class="launch-text">New Launch</h5>
-                </div>
-
-                <div class="card-text flex">
-                  <div class="card-left-text flex">
-                    <h3>Iced Mocha Cookie Crumble</h3>
-                    <p class="card-text-p">TALL(Iced Mocha Cookie Crumble).</p>
-                    <h4>
-                      A mix of cocoa powder, vanila flavour and espresso shot
-                      served on milk and ice , topped with delicious
-                      chocolate.....
-                    </h4>
-                  </div>
-                </div>
-                <div class="purchase flex">
-                  <h3>Rs. 500.00</h3>
-                  <button class="Add-item">Add Item</button>
+            <div class="card-body-container">
+              <div class="new-launch flex">
+                <img src="./asset 7.svg" alt="" />
+                <h5 class="launch-text">New Launch</h5>
+              </div>
+              <div class="card-text flex">
+                <div class="card-left-text flex">
+                  <h3>Mocha Cookie Crumble Frappuccino</h3>
+                  <p class="card-text-p">
+                    TALL(Tall Mocha Cookie Crumble Frappuccino).
+                  </p>
+                  <h4>
+                    A perfect blend of coffee ,vanilla flavour, milk and cocoa
+                    powder. Finished with delicious chocolate whipped.....
+                  </h4>
                 </div>
               </div>
-            </a>
-          </div>
+
+              <div class="purchase flex">
+                <h3>Rs. 480.00</h3>
+                <button class="Add-item">Add Item</button>
+              </div>
+            </div>
+          </a>
+        </div>
+        <!-- Box 2 -->
+
+        <div class="card-container-box flex">
+          <a href="#" class="card-container-a">
+            <img class="card-container-img"
+              src="https://starbucks-cdn-01.s3.ap-south-1.amazonaws.com/Items/Large/webP/104014.webp" alt="" />
+
+            <div class="card-body-container">
+              <div class="new-launch flex">
+                <img src="./asset 7.svg" alt="" />
+                <h5 class="launch-text">New Launch</h5>
+              </div>
+              <div class="card-text flex">
+                <div class="card-left-text flex">
+                  <h3>Mocha Cookie Crumble Frappuccino</h3>
+                  <p class="card-text-p">
+                    TALL(Tall Mocha Cookie Crumble Frappuccino).
+                  </p>
+                  <h4>
+                    A perfect blend of coffee ,vanilla flavour, milk and cocoa
+                    powder. Finished with delicious chocolate whipped.....
+                  </h4>
+                </div>
+              </div>
+
+              <div class="purchase flex">
+                <h3>Rs. 480.00</h3>
+                <button class="Add-item">Add Item</button>
+              </div>
+            </div>
+          </a>
+        </div>
+        <!-- Box 2 -->
+
+        <div class="card-container-box flex">
+          <a href="#" class="card-container-a">
+            <img class="card-container-img"
+              src="https://starbucks-cdn-01.s3.ap-south-1.amazonaws.com/Items/Large/webP/104014.webp" alt="" />
+
+            <div class="card-body-container">
+              <div class="new-launch flex">
+                <img src="./asset 7.svg" alt="" />
+                <h5 class="launch-text">New Launch</h5>
+              </div>
+              <div class="card-text flex">
+                <div class="card-left-text flex">
+                  <h3>Mocha Cookie Crumble Frappuccino</h3>
+                  <p class="card-text-p">
+                    TALL(Tall Mocha Cookie Crumble Frappuccino).
+                  </p>
+                  <h4>
+                    A perfect blend of coffee ,vanilla flavour, milk and cocoa
+                    powder. Finished with delicious chocolate whipped.....
+                  </h4>
+                </div>
+              </div>
+
+              <div class="purchase flex">
+                <h3>Rs. 480.00</h3>
+                <button class="Add-item">Add Item</button>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <!-- box3 -->
+
+        <div class="card-container-box flex">
+          <a href="#" class="card-container-a">
+            <img class="card-container-img"
+              src="https://starbucks-cdn-01.s3.ap-south-1.amazonaws.com/Items/Large/webP/104014.webp" alt="" />
+
+            <div class="card-body-container">
+              <div class="new-launch flex">
+                <img src="./asset 7.svg" alt="" />
+                <h5 class="launch-text">New Launch</h5>
+              </div>
+
+              <div class="card-text flex">
+                <div class="card-left-text flex">
+                  <h3>Iced Mocha Cookie Crumble</h3>
+                  <p class="card-text-p">TALL(Iced Mocha Cookie Crumble).</p>
+                  <h4>
+                    A mix of cocoa powder, vanila flavour and espresso shot
+                    served on milk and ice , topped with delicious
+                    chocolate.....
+                  </h4>
+                </div>
+              </div>
+              <div class="purchase flex">
+                <h3>Rs. 500.00</h3>
+                <button class="Add-item">Add Item</button>
+              </div>
+            </div>
+          </a>
         </div>
       </div>
-    </section>
-  </body>
+    </div>
+  </section>
+</body>
+
 </html>
